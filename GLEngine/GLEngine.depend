@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1518019246 source:d:\code blocks projects\glengine\main.cpp
+	<iostream>
+	"engine.h"
+
+1518019525 d:\code blocks projects\glengine\engine.h
+	<iostream>
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+
+1516459400 d:\code blocks projects\glengine\include\gl\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<Availability.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1516029152 d:\code blocks projects\glengine\include\glfw\glfw3.h
+	<stddef.h>
+	<stdint.h>
+	<OpenGL/gl3.h>
+	<OpenGL/gl3ext.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/glcorearb.h>
+	<GLES/gl.h>
+	<GLES/glext.h>
+	<GLES2/gl2.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl3.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl31.h>
+	<GLES2/gl2ext.h>
+	<vulkan/vulkan.h>
+	<GL/gl.h>
+	<GL/glext.h>
+	<GL/glu.h>
+
+1518022944 source:d:\code blocks projects\glengine\engine.cpp
+	"engine.h"
+	"mesh.h"
+	"shaderprogram.h"
+
+1518021486 d:\code blocks projects\glengine\mesh.h
+	<GL/glew.h>
+	"vertexbuffer.h"
+
+1518021499 d:\code blocks projects\glengine\vertexbuffer.h
+	<GL/glew.h>
+
+1518020203 d:\code blocks projects\glengine\vertexarray.h
+	<GL/glew.h>
+
+1518021461 source:d:\code blocks projects\glengine\mesh.cpp
+	"mesh.h"
+
+1518019909 source:d:\code blocks projects\glengine\vertexbuffer.cpp
+	"vertexbuffer.h"
+
+1518023300 d:\code blocks projects\glengine\shaderprogram.h
+	"shader.h"
+
+1518023380 d:\code blocks projects\glengine\shader.h
+	<iostream>
+	<GL/glew.h>
+
+1518023344 source:d:\code blocks projects\glengine\shader.cpp
+	"shader.h"
+
