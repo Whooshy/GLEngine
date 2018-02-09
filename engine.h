@@ -1,10 +1,12 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
+#include <string>
 #include <iostream>
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
 
 class Engine
 {

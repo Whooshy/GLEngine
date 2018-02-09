@@ -54,6 +54,8 @@
 		</Compiler>
 		<Unit filename="engine.cpp" />
 		<Unit filename="engine.h" />
+		<Unit filename="indexbuffer.cpp" />
+		<Unit filename="indexbuffer.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mesh.cpp" />
 		<Unit filename="mesh.h" />
@@ -61,6 +63,8 @@
 		<Unit filename="shader.h" />
 		<Unit filename="shaderprogram.cpp" />
 		<Unit filename="shaderprogram.h" />
+		<Unit filename="texture.cpp" />
+		<Unit filename="texture.h" />
 		<Unit filename="vertexbuffer.cpp" />
 		<Unit filename="vertexbuffer.h" />
 		<Extensions>

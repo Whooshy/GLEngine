@@ -1,6 +1,7 @@
 #include "engine.h"
 #include "mesh.h"
 #include "shaderprogram.h"
+#include "texture.h"
 
 void ResizeCallback(GLFWwindow* window, int width, int height);
 
@@ -43,8 +44,21 @@ void Engine::Loop()
         0.5f, -0.5f, 0
     };
 
+    float texCoords[] = {
+        0.0f, 0.0f,
+        0.5f, 1.0f,
+        1.0f, 0.0f,
+    };
+
+    int indices[] = {
+        0, 1, 2
+    };
+
     ShaderProgram shaderProgram;
-    Mesh mesh(vertices, sizeof(vertices));
+    Texture texture((std::string) ("./res/textures/brick.png"), GL_LINEAR);
+    shaderProgram.SetTexture("texture_", texture.GetTexture());
+    Mesh mesh(vertices, sizeof(vertices), texCoords, sizeof(texCoords), indices, sizeof(indices), glm::vec3(0, 0, 0), glm::vec3(0, 0, 0), glm::vec3(0.25f, 0.25f, 0.25f));
+    Mesh mesh2(vertices, sizeof(vertices), texCoords, sizeof(texCoords), indices, sizeof(indices), glm::vec3(0, 0.5f, 0), glm::vec3(0, 0, 0), glm::vec3(0.25f, 0.25f, 0.25f));
 
     while(!glfwWindowShouldClose(window))
     {
@@ -52,8 +66,16 @@ void Engine::Loop()
         glClearColor(0.05f, 0.2f, 0.3f, 1.0f);
 
         shaderProgram.Bind();
-        mesh.Bind();
+        texture.Bind();
+
+        mesh.Bind(shaderProgram);
         mesh.Draw();
+
+        mesh2.Bind(shaderProgram);
+        mesh2.Draw();
+
+        mesh.Translate(glm::vec3(0.0001f, 0, 0));
+        mesh2.Translate(glm::vec3(-0.0001f, 0, 0));
 
         glfwSwapBuffers(window);
         glfwPollEvents();

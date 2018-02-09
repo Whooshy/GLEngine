@@ -53,6 +53,16 @@ void ShaderProgram::Clear()
     glDeleteProgram(program);
 }
 
+void ShaderProgram::SetTexture(const std::string &name, GLuint texture)
+{
+    glUniform1i(glGetUniformLocation(program, name.c_str()), texture);
+}
+
+void ShaderProgram::SetMatrix(const std::string &name, glm::mat4 matrix)
+{
+    glUniformMatrix4fv(glGetUniformLocation(program, name.c_str()), 1, GL_FALSE, glm::value_ptr(matrix));
+}
+
 ShaderProgram::~ShaderProgram()
 {
 

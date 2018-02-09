@@ -1,10 +1,5 @@
 #include "shader.h"
 
-Shader::Shader()
-{
-
-}
-
 Shader::Shader(GLenum type, const char* source)
 {
     shader = glCreateShader(type);

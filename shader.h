@@ -2,12 +2,14 @@
 #define SHADER_H
 
 #include <iostream>
+#include <string>
+
 #include <GL/glew.h>
 
 class Shader
 {
     public:
-        Shader();
+        Shader() {}
         Shader(GLenum type, const char* source);
         virtual ~Shader();
 
